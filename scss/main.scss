@@ -1,0 +1,137 @@
+@import 'header';
+@import 'principal';
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    #general{
+        width: 40%;
+        height: 89vh;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        background-color: white;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border: 3px solid black;
+        padding: 20px;
+        #header{
+            @include cabecera;
+            #foto{
+                @include foto;
+            }
+            #nombre{
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 48px;
+                font-weight: 600;
+                margin-top: -100px;
+            }
+        }
+        #main{
+            @include main;
+            #aside{
+                @include aside;
+                .caja{
+                    width: 150px;
+                    height: fit-content;
+                    padding-bottom: 10px;
+                    h3{
+                        color: white;
+                        font-weight: 800;
+                        font-size: 20px;
+                        padding-top: 10px;
+                    }
+                    p{
+                        font-weight: 600;
+                        color: black;
+                    }
+                    .idioma{
+                        margin-bottom: -3px;
+                        padding-top: 3px;
+                    }
+                    .progress {
+                        height: 10px;
+                        width: 100%;
+                        background-color: skyblue;
+                        margin-top: 10px;
+                    }
+                    .progress-bar {
+                        height: 100%;
+                        background: rgb(2, 2, 153);
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+                .caja:not(:last-child){
+                    border-bottom: 3px solid black;
+                }
+            }
+            #section{
+                @include section;
+                .article{
+                    border-top: 3px solid black;
+                    width: 100%;
+                    height: fit-content;
+                    padding-top: 30px;
+                    margin-bottom: 60px;
+                    margin-top: -35px;
+                    padding-left: 20px;
+                    h2{
+                        font-size: 24px;
+                        font-weight: 800;
+                        margin-bottom: -75px;
+                        margin-top: -20px;
+                    }
+                    h2:not(:last-child)::after{
+                        content: '';
+                        background-image: url(../imgs/linea\ temp.png);
+                        background-size: 40px 80px;
+                        display: block;
+                        width: 40px; 
+                        height: 80px;
+                        margin-left: 80px;
+                        margin-top: 10px;
+                    }
+                    .fecha{
+                        margin-bottom: -1px;
+                        font-weight: 600;
+                    }
+                    .desc{
+                        margin-top: -70px;
+                        margin-left: 150px;
+                        margin-bottom: 69px;
+                    }
+                    .tags{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin-top: 30px;
+                        margin-bottom: -35px;
+                        width: 100%;
+                        justify-content: space-around;
+                        margin-left: -20px;
+                    }
+                    .tagsW{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                        margin-bottom: -130px;
+                        margin-top: 50px;
+                        margin-left: -35px;
+                        margin-right: 12px;
+                    }
+
+                    
+                }
+            }
+            
+        }
+    }
+    
+}

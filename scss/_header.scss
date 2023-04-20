@@ -1,0 +1,14 @@
+@mixin cabecera(){
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin foto(){
+    width: 200px;
+    height: 200px;
+    background-image: url(../imgs/foto\ perfil.jpg);
+    background-size: cover;
+    border: 2px solid black;
+}
